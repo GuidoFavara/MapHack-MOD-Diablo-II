@@ -1,6 +1,6 @@
 Necesito hacer el readme agradable a la lectura y implementar traduccion al ingles, linkear las fotos viejas y nuevas.
 
-Aclaración GameTag: Dubai
+Aclaración GameTag: Dubai/Emirati
 Servidor para el cual fue pensado: https://foros.ombuserver.com.ar/viewtopic.php?f=3&t=254
 
 Estuve realizando algunas mejoras al MH que creo yo estarían buenas para todos los users, esta version NO viene a mejorar al que le anda mal o lo lagea el MH, sino a implementar mejoras y ayudas al usuario.
