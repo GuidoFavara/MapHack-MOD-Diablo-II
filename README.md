@@ -1,4 +1,4 @@
-Estuve realizando algunas mejoras al MH que creo yo estarían buenas para todos los users, esta version NO viene a mejorar al que le anda mal o lo lagea el MH, sino a implementar mejoras y ayudas al usuario. Si los administradores lo aprueba podríamos ponerlo como otra opción mas. No voy a pasarlo hasta que no sea aprobado por quien corresponda.
+Estuve realizando algunas mejoras al MH que creo yo estarían buenas para todos los users, esta version NO viene a mejorar al que le anda mal o lo lagea el MH, sino a implementar mejoras y ayudas al usuario.
 
 Ya no se usa mas el UI.Dll ahora todo va en Ombu_Settings.cfg (el ui.dll que cada uno tiene puede ser copiado dentro de éste nuevo archivo).
 
