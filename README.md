@@ -1,3 +1,6 @@
+Necesito hacer el readme agradable a la lectura y implementar traduccion al ingles
+
+
 Estuve realizando algunas mejoras al MH que creo yo estarían buenas para todos los users, esta version NO viene a mejorar al que le anda mal o lo lagea el MH, sino a implementar mejoras y ayudas al usuario.
 
 Ya no se usa mas el UI.Dll ahora todo va en Ombu_Settings.cfg (el ui.dll que cada uno tiene puede ser copiado dentro de éste nuevo archivo).
