@@ -1,0 +1,5 @@
+C:/Users/guido/source/repos/MapHack-MOD-Diablo-II/out/build/x64-Debug (predeterminado)/CMakeFiles/edit_cache.dir
+C:/Users/guido/source/repos/MapHack-MOD-Diablo-II/out/build/x64-Debug (predeterminado)/CMakeFiles/rebuild_cache.dir
+C:/Users/guido/source/repos/MapHack-MOD-Diablo-II/out/build/x64-Debug (predeterminado)/BH/CMakeFiles/BH.dir
+C:/Users/guido/source/repos/MapHack-MOD-Diablo-II/out/build/x64-Debug (predeterminado)/BH/CMakeFiles/edit_cache.dir
+C:/Users/guido/source/repos/MapHack-MOD-Diablo-II/out/build/x64-Debug (predeterminado)/BH/CMakeFiles/rebuild_cache.dir
