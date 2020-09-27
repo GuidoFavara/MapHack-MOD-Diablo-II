@@ -33,5 +33,25 @@ Y lo mas importante. Mejoras en PVP
 
 *Tiene un activador para evitar el flood a quien no le guste o sobre todo si se usa en bh no te aparezca una notificación molesta e inútil para ese ámbito
 
-Creo que no me olvide de nada. Espero sus feedback.
-Sin mas preámbulos, las fotos: 
+Iniciar con BH.sln
+Compilar en Packaging > Win32 
+el dll sale en la carpeta "Packaging"
+
+Del paquete eliminé el inyector ya que no lo utilizamos.
+
+Arhivos modificados hasta donde recuerdo: (debí usar git).
+UI.cpp solo traducciones y movi el menu del mapa asi esta mas prolijo (esto no esta marcado no me acuerdo donde lo toque pero era aca)
+StatsDisplay.cpp Modificado casi integro agrega breaks a la tabla, traduzco el resto
+ScreenInfo.cpp Modifico que la ventana del D2 tenga el nombre del server, agrego donaciones, mh Dubai 
+Mapchack.cpp Traduzco opciones y agrego mas al panel, modo arbitro, notificacion de habilidades
+Itemmover.cpp traducciones
+Item.cpp desactivo opciones que no quice modificar sistema de ping para una variable en el mh que te muestre segun tu filtro los items, agrego alertas, mensaje al inicio de la partida
+BH.cpp aca traduzco y paso todo a ombu_settings.cfg
+AutoTele.cpp: traducciones
+
+TODO:
+D2Helpers.cpp CREO que por aca anda el tema de las trampas en el mapa probe mucho sin exito
+Ombu_Settings.cfg hay que emprolijarlo al publico y agregarle mas precios o separarlos como genco decía en db
+Alerta de expiración de buffs podría agregar contadores y cambiar la forma en la que aparece
+
+
