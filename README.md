@@ -3,6 +3,7 @@ Estuve realizando algunas mejoras al MH que creo yo estarían buenas para todos 
 Ya no se usa mas el UI.Dll ahora todo va en Ombu_Settings.cfg (el ui.dll que cada uno tiene puede ser copiado dentro de éste nuevo archivo).
 
 Detallo algunas de las mejoras:
+
 *"Spam" que indica la url para realizar las donaciones al servidor.
 *Valor de cada item aproximado según la lista de precios actual realizada por los usuarios (no oficial). El MH al entrar a una partida te dice que los precios son a modo de REFERENCIA no para ser tomados tal cual (para evitar problemas)
 *Indica que items necesitas para craftear.
@@ -12,6 +13,7 @@ Detallo algunas de las mejoras:
 *No se ven las orejas
 
 Y lo mas importante. Mejoras en PVP
+
 *Plantilla de tablas mejoradas con recomendaciones (útil para usuarios novatos), indica cuantas resis son "aceptables" y permitidas, los braks y mucho mas. También te lo calcula al momento si sumas resis te dice cuanta te falta para tener lo "ideal"
 *Modo Arbitro: Lo mejor de todo
 *Indica cuando un usuario utiliza pociones de Vida o Mana, usa Auras no permitidas o Usa Templos.
