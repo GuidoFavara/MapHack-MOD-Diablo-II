@@ -31,6 +31,8 @@ class ScreenInfo : public Module {
 		Drawing::Texthook* bhText;
 		Drawing::Texthook* mpqVersionText;
 		Drawing::Texthook* d2Donar;
+		Drawing::Texthook* d2Ombus;
+		Drawing::Texthook* d2Guidox;
 		DWORD gameTimer;
 
 		int packetRequests;

@@ -234,8 +234,8 @@ bool UI::OnLeftClick(bool up, unsigned int mouseX, unsigned int mouseY) {
 			{
 				SetDragged(false, true);
 				if(!up) {
-					PrintText(7, "CTRL+Click para abrir el Menu MH" );
-					PrintText(7, "Mantener Click para mover" );
+					PrintText(7, "CTRL+Click para abrir el Menu MH" ); // traducciones guido
+					PrintText(7, "Mantener Click para mover" );// traducciones guido
 				}
 			}
 			return true;
@@ -255,7 +255,7 @@ bool UI::OnLeftClick(bool up, unsigned int mouseX, unsigned int mouseY) {
 			SetDragged(false, true);
 			if( startX == mouseX && startY == mouseY && GetAsyncKeyState(VK_CONTROL) )
 			{
-				PrintText(8, "Click Izquierdo para cerrar" );
+				PrintText(8, "Click Izquierdo para cerrar" );// traducciones guido
 			}
 		}
 		SetActive(true);

@@ -146,7 +146,7 @@ void Maphack::ReadConfig() {
 	BH::config->ReadToggle("Monster Enchantments", "None", true, Toggles["Monster Enchantments"]);
 	BH::config->ReadToggle("Apply CPU Patch", "None", true, Toggles["Apply CPU Patch"]);
 	BH::config->ReadToggle("Apply FPS Patch", "None", true, Toggles["Apply FPS Patch"]);
-
+	BH::config->ReadToggle("Modo Arbitro", "None", true, Toggles["Modo Arbitro"]); //guido arbitro
 	BH::config->ReadInt("Minimap Max Ghost", automapDraw.maxGhost);
 }
 
@@ -248,7 +248,7 @@ void Maphack::OnLoad() {
 
 	new Checkhook(settingsTab, 4, (Y += 15), &Toggles["Apply FPS Patch"].state, "FPS Patch (SP Only)");
 	new Keyhook(settingsTab, keyhook_x, (Y + 2), &Toggles["Apply FPS Patch"].toggle, "");
-
+	
 	new Texthook(settingsTab, col2_x + 5, 3, "Missile Colors");
 
 	new Colorhook(settingsTab, col2_x, 17, &missileColors["Player"], "Player");
@@ -263,6 +263,11 @@ void Maphack::OnLoad() {
 	new Colorhook(settingsTab, col2_x, 122, &monsterColors["Champion"], "Champion");
 	new Colorhook(settingsTab, col2_x, 137, &monsterColors["Boss"], "Boss");
 
+	new Texthook(settingsTab, col2_x + 5, 152, "Arbitro PvP"); //modo arbitro guido
+	new Checkhook(settingsTab, col2_x, 167, &Toggles["Potas Vida"].state, "Potas Vida"); //modo arbitro guido
+	new Checkhook(settingsTab, col2_x, 182, &Toggles["Potas Mana"].state, "Potas Mana"); //modo arbitro guido
+	new Checkhook(settingsTab, col2_x, 197, &Toggles["Auras"].state, "Auras"); //modo arbitro guido
+	new Checkhook(settingsTab, col2_x, 212, &Toggles["Templos"].state, "Templos"); //modo arbitro guido
 	new Texthook(settingsTab, 6, (Y += 15), "Reveal Type:");
 
 	vector<string> options;
@@ -658,100 +663,183 @@ void Squelch(DWORD Id, BYTE button) {
 
 	return;
 }
-
-void Maphack::OnGamePacketRecv(BYTE *packet, bool *block) {
+void Maphack::OnGamePacketRecv(BYTE* packet, bool* block) {
 	switch (packet[0]) {
 
 	case 0x9c: {
-		INT64 icode   = 0;
-        char code[5]  = "";
-        BYTE mode     = packet[1];
-        DWORD gid     = *(DWORD*)&packet[4];
-        BYTE dest     = ((packet[13] & 0x1C) >> 2);
+		INT64 icode = 0;
+		char code[5] = "";
+		BYTE mode = packet[1];
+		DWORD gid = *(DWORD*)&packet[4];
+		BYTE dest = ((packet[13] & 0x1C) >> 2);
 
-        switch(dest)
-        {
-                case 0: 
-                case 2:
-                        icode = *(INT64 *)(packet+15)>>0x04;
-                        break;
-                case 3:
-                case 4:
-                case 6:
-                        if(!((mode == 0 || mode == 2) && dest == 3))
-                        {
-                                if(mode != 0xF && mode != 1 && mode != 12)
-                                        icode = *(INT64 *)(packet+17) >> 0x1C;
-                                else
-                                        icode = *(INT64 *)(packet+15) >> 0x04;
-                        } 
-                        else  
-                                icode = *(INT64 *)(packet+17) >> 0x05;
-                        break;
-                default:
-                        break;
-        }
+		switch (dest)
+		{
+		case 0:
+		case 2:
+			icode = *(INT64*)(packet + 15) >> 0x04;
+			break;
+		case 3:
+		case 4:
+		case 6:
+			if (!((mode == 0 || mode == 2) && dest == 3))
+			{
+				if (mode != 0xF && mode != 1 && mode != 12)
+					icode = *(INT64*)(packet + 17) >> 0x1C;
+				else
+					icode = *(INT64*)(packet + 15) >> 0x04;
+			}
+			else
+				icode = *(INT64*)(packet + 17) >> 0x05;
+			break;
+		default:
+			break;
+		}
 
-        memcpy(code, &icode, 4);
-        if(code[3] == ' ') code[3] = '\0';
+		memcpy(code, &icode, 4);
+		if (code[3] == ' ') code[3] = '\0';
 
-        //PrintText(1, "%s", code);
+		//PrintText(1, "%s", code);
 
 		//if(mode == 0x0 || mode == 0x2 || mode == 0x3) {
 		//	BYTE ear = packet[10] & 0x01;
 		//	if(ear) *block = true;
 		//}
 		break;
-		}
+	}
 
 	case 0xa8:
-	case 0xa7: {
-			//if(packet[1] == 0x0) {
-			//	if(packet[6+(packet[0]-0xa7)] == 100) {
-			//		UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
-			//		if(pUnit)
-			//			PrintText(1, "Alert: \377c4Player \377c2%s \377c4drank a \377c1Health \377c4potion!", pUnit->pPlayerData->szName);
-			//	} else if (packet[6+(packet[0]-0xa7)] == 105) {
-			//		UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
-			//		if(pUnit)
-			//			if(pUnit->dwTxtFileNo == 1)
-			//				if(D2COMMON_GetUnitState(pUnit, 30))
-			//					PrintText(1, "Alert: \377c4ES Sorc \377c2%s \377c4drank a \377c3Mana \377c4Potion!", pUnit->pPlayerData->szName);
-			//	} else if (packet[6+(packet[0]-0xa7)] == 102) {//remove portal delay
-			//		*block = true;
-			//	}
-			//}
-			break;			   
-		}
-	case 0x94: {
-			BYTE Count = packet[1];
-			DWORD Id = *(DWORD*)&packet[2];
-			for(DWORD i = 0;i < Count;i++) {
-				BaseSkill S;
-				S.Skill = *(WORD*)&packet[6+(3*i)];
-				S.Level = *(BYTE*)&packet[8+(3*i)];
-				Skills[Id].push_back(S);
+	case 0xa7: { //agregados Guido todo el packet modificado por favor no tocar sin preguntar
+		if (packet[1] == 0x0) {
+			if (packet[6 + (packet[0] - 0xa7)] == 100) {
+				UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
+				if (pUnit)
+					if (Toggles["Potas Vida"].state)
+						PrintText(1, "Alerta: \377c4El jugador: \377c2%s \377c4Uso una \377c4Pota de \377c1Vida!", pUnit->pPlayerData->szName);
 			}
-			//for(vector<BaseSkill>::iterator it = Skills[Id].begin();  it != Skills[Id].end(); it++)
-			//	PrintText(1, "Skill %d, Level %d", it->Skill, it->Level);
-			break;
+			else if (packet[6 + (packet[0] - 0xa7)] == 105) {
+				UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
+				if (pUnit)
+					if (pUnit->dwTxtFileNo == 1)
+						if (D2COMMON_GetUnitState(pUnit, 30))
+							if (Toggles["Potas Mana"].state)
+								PrintText(1, "Alerta: \377c4ES Sorc \377c2%s \377c4Uso una \377c3Mana \377c4Pota!", pUnit->pPlayerData->szName);
+			}
+			else if (packet[6 + (packet[0] - 0xa7)] == 102) {//remove portal delay
+				*block = true;
+			}
+			else if (packet[1] == 0x0) { //agregados guido
+				if (packet[6 + (packet[0] - 0xa7)] == 106) {
+					UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
+					if (pUnit)
+						if (Toggles["Potas Mana"].state)
+							PrintText(1, "Alerta: \377c4El jugador: \377c2%s \377c4Uso una \377c4Pota de \377c3Mana!", pUnit->pPlayerData->szName);
+				}
+				else if (packet[1] == 0x0) {
+					if (packet[6 + (packet[0] - 0xa7)] == 106) {
+						UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
+						if (pUnit)
+							if (Toggles["Potas Mana"].state)
+								PrintText(1, "Alerta: \377c4El jugador: \377c2%s \377c4Uso una \377c4Pota de \377c3Mana!", pUnit->pPlayerData->szName);
+					}
+					else if (packet[1] == 0x0) {
+						if (packet[6 + (packet[0] - 0xa7)] == 45) {
+							UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
+							if (pUnit)
+								if (Toggles["Auras"].state)
+									PrintText(1, "Alerta: \377c4El jugador: \377c2%s \377c4Esta Usando \377c8Purificacion!", pUnit->pPlayerData->szName);
+						}
+						else if (packet[1] == 0x0) {
+							if (packet[6 + (packet[0] - 0xa7)] == 48) {
+								UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
+								if (pUnit)
+									if (Toggles["Auras"].state)
+										PrintText(1, "Alerta: \377c4El jugador: \377c2%s \377c4Esta Usando \377c8Meditacion!", pUnit->pPlayerData->szName);
+							}
+							else if (packet[1] == 0x0) {
+								if (packet[6 + (packet[0] - 0xa7)] == 34) {
+									UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
+									if (pUnit)
+										if (Toggles["Auras"].state)
+											PrintText(1, "Alerta: \377c4El jugador: \377c2%s \377c4Esta Usando \377c8Plegaria!", pUnit->pPlayerData->szName);
+								}
+								else if (packet[1] == 0x0) {
+									if (packet[6 + (packet[0] - 0xa7)] == 50) {
+										UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
+										if (pUnit)
+											if (Toggles["Auras"].state)
+												PrintText(1, "Alerta: \377c4El jugador: \377c2%s \377c4Esta Usando \377c8Redencion!", pUnit->pPlayerData->szName);
+									}
+									else if (packet[1] == 0x0) {
+										if (packet[6 + (packet[0] - 0xa7)] == 41) {
+											UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
+											if (pUnit)
+												if (Toggles["Auras"].state)
+													PrintText(1, "Alerta: \377c4El jugador: \377c2%s \377c4Esta Usando \377c8Vigor!", pUnit->pPlayerData->szName);
+										}
+									else if (packet[1] == 0x0) {
+										if (packet[6 + (packet[0] - 0xa7)] == 87) {
+											UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
+											if (pUnit)
+												if (Toggles["Auras"].state)
+													PrintText(1, "Alerta: \377c4El jugador: \377c2%s \377c4Esta Usando \377c8Slow Missiles!", pUnit->pPlayerData->szName);
+										}
+										else if (packet[1] == 0x0) {
+											if (packet[6 + (packet[0] - 0xa7)] == 135) {
+												UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
+												if (pUnit)
+													if (Toggles["Templos"].state)
+														PrintText(1, "Alerta: \377c4El jugador: \377c2%s \377c4Esta Usando Templo De: \377c3Reg. Mana!", pUnit->pPlayerData->szName);
+											}
+											else if (packet[1] == 0x0) {
+												if (packet[6 + (packet[0] - 0xa7)] == 86) {
+													UnitAny* pUnit = D2CLIENT_FindServerSideUnit(*(DWORD*)&packet[2], 0);
+													if (pUnit)
+														if (Toggles["Templos"].state)
+															PrintText(1, "Alerta: \377c4El jugador: \377c2%s \377c4Fue Atacado", pUnit->pPlayerData->szName);
+												}
+											}
+										}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
+		break;
+	}
+	case 0x94: {
+		BYTE Count = packet[1];
+		DWORD Id = *(DWORD*)&packet[2];
+		for (DWORD i = 0; i < Count; i++) {
+			BaseSkill S;
+			S.Skill = *(WORD*)&packet[6 + (3 * i)];
+			S.Level = *(BYTE*)&packet[8 + (3 * i)];
+			Skills[Id].push_back(S);
+		}
+		//for(vector<BaseSkill>::iterator it = Skills[Id].begin();  it != Skills[Id].end(); it++)
+		//PrintText(1, "Skill %d, Level %d", it->Skill, it->Level);
+		break;
+	}
 	case 0x5b: {	//36   Player In Game      5b [WORD Packet Length] [DWORD Player Id] [BYTE Char Type] [NULLSTRING[16] Char Name] [WORD Char Lvl] [WORD Party Id] 00 00 00 00 00 00 00 00
-			WORD lvl = *(WORD*)&packet[24];
-			DWORD Id = *(DWORD*)&packet[3];
-			char* name = (char*)&packet[8];
-			UnitAny* Me = D2CLIENT_GetPlayerUnit();
-			if(!Me)
-				return;
-			else if (!strcmp(name, Me->pPlayerData->szName))
-				return;
-			//if(lvl < 9)
-			//	Squelch(Id, 3);
-		}			//2 = mute, 3 = squelch, 4 = hostile
+		WORD lvl = *(WORD*)&packet[24];
+		DWORD Id = *(DWORD*)&packet[3];
+		char* name = (char*)&packet[8];
+		UnitAny* Me = D2CLIENT_GetPlayerUnit();
+		if (!Me)
+			return;
+		else if (!strcmp(name, Me->pPlayerData->szName))
+			return;
+		//if(lvl < 9)
+		//	Squelch(Id, 3);
+	}			//2 = mute, 3 = squelch, 4 = hostile
 	}
 }
 
-void Maphack::RevealGame() {
+	void Maphack::RevealGame() {
 	// Check if we have already revealed the game.
 	if (revealedGame)
 		return;

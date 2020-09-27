@@ -14,15 +14,17 @@ map<std::string, Toggle> ScreenInfo::Toggles;
 void ScreenInfo::OnLoad() {
 	LoadConfig();
 
-	bhText = new Texthook(OutOfGame, 795, 6, " ÿc3Ombuÿc8Server ÿc MH Dubai Edition 1.0");
+	bhText = new Texthook(OutOfGame, 795, 6, " ÿc3Ombuÿc8Server ÿc MH Dubai Edition 1.0"); //el de arriba outgame Guido
 	bhText->SetAlignment(Right);
 	bhText->SetColor(Yellow);
-
-	d2Donar = new Texthook(OutOfGame, 420, 2, "Click aqui para donar     ");
+	
+	d2Donar = new Texthook(OutOfGame, 420, 2, "Click aqui para donar     "); //Donacion Guido
 	d2Donar->SetAlignment(Center);
 	d2Donar->SetColor(White);
 	d2Donar->SetFont(1);
 
+	d2Ombus = new Texthook(InGame, 1150, 690, " ÿc3Ombuÿc8Server ÿc MH Dubai Edition 1.0"); //el que va abajo ingame Guido
+	d2Ombus->SetAlignment(Right);
 
 	if (BH::cGuardLoaded) {
 		Texthook* cGuardText = new Texthook(Perm, 790, 23, "ÿc4cGuard Loaded");
@@ -49,17 +51,15 @@ void ScreenInfo::LoadConfig() {
 		}
 	}
 }
-
 void ScreenInfo::MpqLoaded() {
 	mpqVersionText = new Texthook(Perm, 5, 589, MpqVersion);
 	mpqVersionText->SetColor(Gold);
 }
-
 void ScreenInfo::OnGameJoin() {
 	BnetData* pInfo = (*p_D2LAUNCH_BnData);
 	UnitAny *unit = D2CLIENT_GetPlayerUnit();
 	if (unit) {
-		std::string title = (std::string)"Diablo II - ";
+		std::string title = (std::string)"Diablo II OmbuServer - "; //Guido Ventana 
 		if (strlen(pInfo->szAccountName) > 0) {
 			title += (std::string)pInfo->szAccountName + " - ";
 		}
@@ -182,7 +182,7 @@ void ScreenInfo::OnDraw() {
 	}
 
 	for (std::deque<StateWarning*>::iterator it = CurrentWarnings.begin(); it != CurrentWarnings.end(); ++it) {
-		Texthook::Draw(400, 30 * (yOffset++), Center, 3, Red, "%s has expired!", (*it)->name.c_str());
+		Texthook::Draw(400, 30 * (yOffset++), Center, 3, Red, "%s has expired!", (*it)->name.c_str()); // aca me gustaria cambiarlo - Agregado guido
 	}
 
 	// It's a kludge to peek into other modules for config info, but it just seems silly to
@@ -254,20 +254,20 @@ void ScreenInfo::drawExperienceInfo(){
 	sprintf_s(sExp, "%00.2f%% (%s%00.2f%%) [%s%.2f%s/s]", pExp, expGainPct >= 0 ? "+" : "", expGainPct, expPerSecond >= 0 ? "+" : "", expPerSecond, unit);
 
 	Texthook::Draw((*p_D2CLIENT_ScreenSizeX / 2) - 100, *p_D2CLIENT_ScreenSizeY - 60, Center, 6, White, "%s", sExp);
-}
 
+}
 void ScreenInfo::OnAutomapDraw() {
 	GameStructInfo* pInfo = (*p_D2CLIENT_GameInfo);
 	BnetData* pData = (*p_D2LAUNCH_BnData);
 	UnitAny* pUnit = D2CLIENT_GetPlayerUnit();
-	char* szDiff[3] = {"Normal", "Nightmare", "Hell"};
+	char* szDiff[3] = { "Normal", "Nightmare", "Hell" };
 	if (!pInfo || !pData || !pUnit)
 		return;
-	int y = 6+(BH::cGuardLoaded?16:0);
+	int y = 6 + (BH::cGuardLoaded ? 16 : 0);
 
 	char gameTime[20];
 	int nTime = ((GetTickCount() - gameTimer) / 1000);
-	sprintf_s(gameTime, 20, "%.2d:%.2d:%.2d", nTime/3600, (nTime/60)%60, nTime%60);
+	sprintf_s(gameTime, 20, "%.2d:%.2d:%.2d", nTime / 3600, (nTime / 60) % 60, nTime % 60);
 
 	time_t tTime;
 	time(&tTime);
@@ -280,13 +280,13 @@ void ScreenInfo::OnAutomapDraw() {
 	// will crash when you attempt to open the map (which calls OnAutomapDraw function). We need to get the player unit
 	// again after calling this function. It may be a good idea in general not to store the return value of
 	// GetPlayerUnit.
-	char *level = UnicodeToAnsi(D2CLIENT_GetLevelName(pUnit->pPath->pRoom1->pRoom2->pLevel->dwLevelNo));
+	char* level = UnicodeToAnsi(D2CLIENT_GetLevelName(pUnit->pPath->pRoom1->pRoom2->pLevel->dwLevelNo));
 	pUnit = D2CLIENT_GetPlayerUnit();
 	if (!pUnit) return;
 
 	CHAR szPing[10] = "";
 	sprintf_s(szPing, sizeof(szPing), "%d", *p_D2CLIENT_Ping);
-
+	
 	AutomapReplace automap[] = {
 		{"GAMENAME", pData->szGameName},
 		{"GAMEPASS", pData->szGamePass},
@@ -314,9 +314,10 @@ void ScreenInfo::OnAutomapDraw() {
 		if (key.length() > 0) {
 			Texthook::Draw(*p_D2CLIENT_ScreenSizeX - 10, y, Right,0,Gold,"%s", key.c_str());
 			y += 16;
+		
 		}
+	
 	}
-
 	delete [] level;
 }
 
@@ -362,7 +363,7 @@ void ScreenInfo::OnGamePacketRecv(BYTE* packet, bool* block) {
 			ReceivedQuestPacket = true;
 			break;
 		}
-	//case 0xA8:
+	//case 0xA8:  // Esto avisa cuando un State empieza necesitaria un contador Guido
 	//	{
 	//		// Packet received when the character begins a new state (i.e. buff/effect received).
 	//		BYTE unitType = packet[1];
@@ -370,6 +371,11 @@ void ScreenInfo::OnGamePacketRecv(BYTE* packet, bool* block) {
 	//		BYTE packetLen = packet[6];
 	//		DWORD state = packet[7];
 	//		DWORD me = pUnit ? pUnit->dwUnitId : 0;
+	//		if (unitType == UNIT_PLAYER && unitId == me) {
+	//			if (SkillWarningMap.find(state) != SkillWarningMap.end()) {
+	//				CurrentWarnings.push_back(new StateWarning(SkillWarningMap[state], BHGetTickCount()));
+	//			}
+	//		}
 	//		break;
 	//	}
 	case 0xA9:
@@ -397,6 +403,7 @@ void ScreenInfo::OnGameExit() {
 	DiabloBlocked = false;
 	BaalBlocked = false;
 	ReceivedQuestPacket = false;
+	
 }
 
 

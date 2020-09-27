@@ -145,7 +145,7 @@ void StatsDisplay::OnDraw() {
 		Drawing::Boxhook::Draw(GetX(),GetY(), GetXSize(), GetYSize(), White, Drawing::BTBlack);
 		Drawing::Framehook::DrawRectStub(&pRect);
 
-		Texthook::Draw(column1, (y += 8), None, 6, Gold,
+		Texthook::Draw(column1, (y += 8), None, 6, Gold,// traducciones guido
 				"Nombre:ÿc0 %s",
 				isMerc ? "ÿc;Mercenary" : unit->pPlayerData->szName);
 		Texthook::Draw(pRect.right - 5, y, Right, 6, Gold,
@@ -190,13 +190,13 @@ void StatsDisplay::OnDraw() {
 		int lAbsorbPct = (int)D2COMMON_GetUnitStat(unit, STAT_LIGHTNINGABSORBPERCENT, 0);
 		int mAbsorb = (int)D2COMMON_GetUnitStat(unit, STAT_MAGICABSORB, 0);
 		int mAbsorbPct = (int)D2COMMON_GetUnitStat(unit, STAT_MAGICABSORBPERCENT, 0);
-		Texthook::Draw(column1, (y += 16), None, 6, Red, L"ÿc4Absorcion (ABS): ÿc1%dÿc0/ÿc1%d%c ÿc3%dÿc0/ÿc3%d%c ÿc9%dÿc0/ÿc9%d%c ÿc8%dÿc0/ÿc8%d%c      ÿc4Permitidas PVP Party: ÿc4  ÿc1 20 ÿc0/ ÿc3 20 ÿc0/ ÿc9 20", fAbsorb, fAbsorbPct, '%', cAbsorb, cAbsorbPct, '%', lAbsorb, lAbsorbPct, '%', mAbsorb, mAbsorbPct, '%');
+		Texthook::Draw(column1, (y += 16), None, 6, Red, L"ÿc4Absorcion (ABS): ÿc1%dÿc0/ÿc1%d%c ÿc3%dÿc0/ÿc3%d%c ÿc9%dÿc0/ÿc9%d%c ÿc8%dÿc0/ÿc8%d%c      ÿc4Permitidas PVP Party: ÿc4  ÿc1 20 ÿc0/ ÿc3 20 ÿc0/ ÿc9 20", fAbsorb, fAbsorbPct, '%', cAbsorb, cAbsorbPct, '%', lAbsorb, lAbsorbPct, '%', mAbsorb, mAbsorbPct, '%');// traducciones guido
 		
 		int dmgReduction = (int)D2COMMON_GetUnitStat(unit, STAT_DMGREDUCTION, 0);
 		int dmgReductionPct = (int)D2COMMON_GetUnitStat(unit, STAT_DMGREDUCTIONPCT, 0);
 		int magReduction = (int)D2COMMON_GetUnitStat(unit, STAT_MAGICDMGREDUCTION, 0);
 		int magReductionPct = (int)D2COMMON_GetUnitStat(unit, STAT_MAGICDMGREDUCTIONPCT, 0);
-		Texthook::Draw(column1, (y += 16), None, 6, Tan, L"ÿc4Damage Reduction (DR): ÿc7%dÿc0/ÿc7%d%c ÿc8%dÿc0/ÿc8%d%c          ÿc4Permitido en PVP Party: ÿc8 50 ÿc4Maximo, Pala Hammer ÿc8 30", dmgReduction, dmgReductionPct, '%', magReduction, magReductionPct, '%');
+		Texthook::Draw(column1, (y += 16), None, 6, Tan, L"ÿc4Damage Reduction (DR): ÿc7%dÿc0/ÿc7%d%c ÿc8%dÿc0/ÿc8%d%c          ÿc4Permitido en PVP Party: ÿc8 50 ÿc4Maximo, Pala Hammer ÿc8 30", dmgReduction, dmgReductionPct, '%', magReduction, magReductionPct, '%');// agrgado guido
 		y += 8;
 
 		int fMastery = (int)D2COMMON_GetUnitStat(unit, STAT_FIREMASTERY, 0);
@@ -211,10 +211,10 @@ void StatsDisplay::OnDraw() {
 		int pPierce = (int)D2COMMON_GetUnitStat(unit, STAT_PSENEMYPSNRESREDUC, 0);
 		int mPierce = (int)D2COMMON_GetUnitStat(unit, STAT_PASSIVEMAGICRESREDUC, 0);
 		Texthook::Draw(column1, (y += 16), None, 6, Gold,
-				L"Daño agregado de Iris u otra fuente similar:ÿc1 %d%%ÿc3 %d%%ÿc9 %d%%ÿc2 %d%%ÿc8 %d%%",
+				L"Daño agregado de Iris u otra fuente similar:ÿc1 %d%%ÿc3 %d%%ÿc9 %d%%ÿc2 %d%%ÿc8 %d%%",// traducciones guido
 				fMastery, cMastery, lMastery, pMastery, mMastery);
 		Texthook::Draw(column1, (y += 16), None, 6, Gold,
-				L"Daño reducido al enemigo de Iris u otra fuente similar:ÿc1 %d%%ÿc3 %d%%ÿc9 %d%%ÿc2 %d%%ÿc8 %d%%",
+				L"Daño reducido al enemigo de Iris u otra fuente similar:ÿc1 %d%%ÿc3 %d%%ÿc9 %d%%ÿc2 %d%%ÿc8 %d%%",// traducciones guido
 				fPierce, cPierce, lPierce, pPierce, mPierce);
 		int classNum = pData->nCharClass;
 		auto classArMod = CharList[classNum]->toHitFactor - 35;

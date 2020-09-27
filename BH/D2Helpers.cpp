@@ -92,13 +92,13 @@ bool IsValidMonster(UnitAny *pUnit)
 	
 	if ((pUnit->dwTxtFileNo == 68) && (pUnit->dwMode == 14))// Ignore burrowing maggots
 		return false;
-
+		
 	//Hide the water creepers
 	if ((pUnit->dwTxtFileNo == 258 || (pUnit->dwTxtFileNo == 261)) && (pUnit->dwMode == 14))
 		return false;
 
-	DWORD badMonIds[] = {227, 283, 326, 327, 328, 329, 330, 410, 411, 412, 413, 414, 415, 416, 366, 406,
-						 351, 352, 353, 266, 408, 516, 517, 518, 519, 522, 523, 543, 543, 545};
+	DWORD badMonIds[] = { 227, 283, 326, 327, 328, 329, 330, 410, 411, 412, 413, 414, 415, 416, 366, 406,
+						 351, 352, 353, 266, 408, 516, 517, 518, 519, 522, 523, 543, 543, 545 };
 
 	for (DWORD n = 0; n < 30; n++)
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-#define BH_VERSION "Menu del MH"
+#define BH_VERSION "Menu del MH" //guido
 
 #define CODE_PAGE 1252 // windows-1252	ANSI Latin 1; Western European (Windows)
 

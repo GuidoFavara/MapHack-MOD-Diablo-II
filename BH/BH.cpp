@@ -92,7 +92,7 @@ DWORD WINAPI LoadMPQData(VOID* lpvoid){
 
 void BH::Initialize()
 {
-	moduleManager = new ModuleManager();
+	moduleManager = new ModuleManager(); // Modifacion/ agregado guido cambio a cfg
 	config = new Config("Ombu_Settings.cfg");
 	if(!config->Parse()) {
 		config->SetConfigName("Ombu_Default.cfg");
@@ -194,7 +194,7 @@ bool BH::Shutdown() {
 bool BH::ReloadConfig() {
 	if (initialized){
 		if (D2CLIENT_GetPlayerUnit()) {
-			PrintText(0, "Recargando la cfg del MH: %s", config->GetConfigName().c_str());
+			PrintText(0, "Recargando la cfg del MH: %s", config->GetConfigName().c_str()); // traducciones guido
 		}
 		config->Parse();
 		itemConfig->Parse();

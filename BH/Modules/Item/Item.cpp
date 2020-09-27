@@ -100,6 +100,7 @@ void ResetCaches() {
 void Item::OnGameJoin() {
 	// reset the item name cache upon joining games
 	// (GUIDs not unique across games)
+	PrintText(1, "ÿc8Los precios son de REFERENCIA");  // mensaje al entrar a la partida Guido
 	ResetCaches();
 }
 
@@ -119,8 +120,8 @@ void Item::LoadConfig() {
 	BH::config->ReadToggle("Allow Unknown Items", "None", false, Toggles["Allow Unknown Items"]);
 	BH::config->ReadToggle("Suppress Invalid Stats", "None", false, Toggles["Suppress Invalid Stats"]);
 	BH::config->ReadToggle("Always Show Item Stat Ranges", "None", true, Toggles["Always Show Item Stat Ranges"]);
-	BH::config->ReadInt("Filter Level", filterLevelSetting);
-	BH::config->ReadInt("Ping Level", pingLevelSetting);
+	//BH::config->ReadInt("Filter Level", filterLevelSetting); desactivado guido
+	//BH::config->ReadInt("Ping Level", pingLevelSetting); desactivado guido
 
 	ItemDisplay::UninitializeItemRules();
 
@@ -193,26 +194,26 @@ void Item::DrawSettings() {
 	new Keyhook(settingsTab, 4, y+2, &showPlayer, "Show Player's Gear:   ");
 	y += 15;
 
-	new Texthook(settingsTab, 4, y, "No cambiar:");
+	//new Texthook(settingsTab, 4, y, "Desactivado:"); //Sistema Ping desactivado Guido
 
-	vector<string> options;
-	options.push_back("0 - None");
-	options.push_back("1 - Minimal");
-	options.push_back("2 - Moderate");
-	options.push_back("3 - Aggressive");
-	new Combohook(settingsTab, 85, y, 120, &filterLevelSetting, options);
+	//vector<string> options;
+	//options.push_back("0 - None");
+	//options.push_back("1 - Minimal");
+	//options.push_back("2 - Moderate");
+	//options.push_back("3 - Aggressive");
+	//new Combohook(settingsTab, 85, y, 120, &filterLevelSetting, options);
 
-	new Texthook(settingsTab, 234, y, "No cambiar:");
+	//new Texthook(settingsTab, 234, y, "Desactivado:");
 
-	vector<string> ping_options;
-	ping_options.push_back("0");
-	ping_options.push_back("1");
-	ping_options.push_back("2");
-	ping_options.push_back("3");
-	ping_options.push_back("4");
-	ping_options.push_back("5");
-	ping_options.push_back("6");
-	new Combohook(settingsTab, 330, y, 40, &pingLevelSetting, ping_options);
+	//vector<string> ping_options;
+	//ping_options.push_back("0");
+	//ping_options.push_back("1");
+	//ping_options.push_back("2");
+	//ping_options.push_back("3");
+	//ping_options.push_back("4");
+	//ping_options.push_back("5");
+	//ping_options.push_back("6");
+	//new Combohook(settingsTab, 330, y, 40, &pingLevelSetting, ping_options);
 }
 
 void Item::OnUnload() {

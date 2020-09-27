@@ -30,7 +30,7 @@ DWORD idBookId;
 DWORD unidItemId;
 
 void ItemMover::Init() {
-	// We should be able to get the layout from *p_D2CLIENT_StashLayout and friends,
+	// We should be able to get the layout from *p_D2CLIENT_StashLayout and friends, //esto tiene potencial guido
 	// but doesn't seem to be working at the moment so use the mpq data.
 
 	InventoryLayout *classicStashLayout;
@@ -423,18 +423,18 @@ void ItemMover::OnRightClick(bool up, int x, int y, bool* block) {
 }
 
 void ItemMover::LoadConfig() {
-	BH::config->ReadKey("Use TP Tome", "VK_NUMPADADD", TpKey);
-	BH::config->ReadKey("Use Healing Potion", "VK_NUMPADMULTIPLY", HealKey);
-	BH::config->ReadKey("Use Mana Potion", "VK_NUMPADSUBTRACT", ManaKey);
+	BH::config->ReadKey("Use TP Tome", "VK_NUMPADADD", TpKey); // traducciones guido
+	BH::config->ReadKey("Use Healing Potion", "VK_NUMPADMULTIPLY", HealKey);// traducciones guido
+	BH::config->ReadKey("Use Mana Potion", "VK_NUMPADSUBTRACT", ManaKey);// traducciones guido
 
-	BH::config->ReadInt("Low TP Warning", tp_warn_quantity);
+	BH::config->ReadInt("Low TP Warning", tp_warn_quantity);// traducciones guido
 }
 
 void ItemMover::OnLoad() {
 	LoadConfig();
 	Drawing::Texthook* colored_text;
 
-	settingsTab = new Drawing::UITab("Atajos", BH::settingsUI);
+	settingsTab = new Drawing::UITab("Atajos", BH::settingsUI);// traducciones guido de aca para abajo
 
 	unsigned int x = 8;
 	unsigned int y = 7;
@@ -451,7 +451,6 @@ void ItemMover::OnLoad() {
 	colored_text->SetColor(Gold);
 	colored_text = new Drawing::Texthook(settingsTab, x, (y += 15),
 			"Shift+Click Derecho Mover items entre baul/cubo/inv");
-	colored_text->SetColor(Gold);
 	colored_text = new Drawing::Texthook(settingsTab, x, (y += 15),
 			"Ctrl+Click Derecho Dropea el item al suelo");
 	colored_text->SetColor(Gold);
@@ -487,7 +486,7 @@ void ItemMover::OnKey(bool up, BYTE key, LPARAM lParam, bool* block)  {
 			}
 			//char *code = D2COMMON_GetItemText(pItem->dwTxtFileNo)->szCode;
 			//if (code[0] == 'b' && code[1] == 'o' && code[2] == 'x') {
-			//	// Hack to pick up cube to fix cube-in-cube problem
+			//	// Hack to pick up cube to fix cube-in-cube problem  NO ANDA GUIDO
 			//	BYTE PacketDataCube[5] = {0x19,0,0,0,0};
 			//	*reinterpret_cast<int*>(PacketDataCube + 1) = pItem->dwUnitId;
 			//	D2NET_SendPacket(5, 1, PacketDataCube);
@@ -532,7 +531,7 @@ void ItemMover::OnKey(bool up, BYTE key, LPARAM lParam, bool* block)  {
 			*reinterpret_cast<WORD*>(PacketData + 5) = (WORD)unit->pPath->xPos;
 			*reinterpret_cast<WORD*>(PacketData + 9) = (WORD)unit->pPath->yPos;
 			if (tp_quantity < tp_warn_quantity) {
-				PrintText(Red, "Compra TP te quedan pocos!");
+				PrintText(Red, "Compra TP te quedan pocos!");// agregados guido
 				PrintText(Red, "Compra TP te quedan pocos!");
 				PrintText(Red, "Compra TP te quedan pocos!");
 			}
