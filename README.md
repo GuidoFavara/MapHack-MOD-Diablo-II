@@ -1,4 +1,6 @@
-Necesito hacer el readme agradable a la lectura y implementar traduccion al ingles
+Necesito hacer el readme agradable a la lectura y implementar traduccion al ingles, linkear las fotos viejas y nuevas.
+
+Aclaración GameTag: Dubai
 
 
 Estuve realizando algunas mejoras al MH que creo yo estarían buenas para todos los users, esta version NO viene a mejorar al que le anda mal o lo lagea el MH, sino a implementar mejoras y ayudas al usuario.
