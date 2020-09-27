@@ -14,12 +14,18 @@ Detallo algunas de las mejoras:
 
 Y lo mas importante. Mejoras en PVP
 
-*Plantilla de tablas mejoradas con recomendaciones (útil para usuarios novatos), indica cuantas resis son "aceptables" y permitidas, los braks y mucho mas. También te lo calcula al momento si sumas resis te dice cuanta te falta para tener lo "ideal"
+*Plantilla de tablas mejoradas con recomendaciones (útil para usuarios novatos), indica cuantas resis son "aceptables" y permitidas, los braks y mucho mas. También te lo calcula al momento si sumas resis te dice cuanta te falta para tener lo "ideal".
+
 *Modo Arbitro: Lo mejor de todo
+
 *Indica cuando un usuario utiliza pociones de Vida o Mana, usa Auras no permitidas o Usa Templos.
-Para que esto funcione no es necesario que todos tengan el MH actualizado un user con MH viejo puede ser detectado por un user con el MH nuevo.
-*La notificación le aparece a todo usuario que posea el MH nuevo
+
+*Para que esto funcione no es necesario que todos tengan el MH actualizado un user con MH viejo puede ser detectado por un user con el MH nuevo.
+
+*La notificación le aparece a todo usuario que posea el MH nuevo.
+
 *Los usuarios no necesitan estar "cerca" para que esta notificación aparezca, quiere decir que mientras ambos esten en el acto 1 va a figurar que potearon o hicieron algo no permitido.
+
 *Tiene un activador para evitar el flood a quien no le guste o sobre todo si se usa en bh no te aparezca una notificación molesta e inútil para ese ámbito
 
 Creo que no me olvide de nada. Espero sus feedback.
