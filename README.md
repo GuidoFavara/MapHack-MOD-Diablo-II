@@ -1,21 +1,30 @@
-Estuve realizando algunas mejoras al MH que creo yo estarían buenas para todos los users, esta version NO viene a mejorar al que le anda mal o lo lagea el MH, sino a implementar mejoras y ayudas al usuario. Si los administradores lo aprueba podríamos ponerlo como otra opción mas. No voy a pasarlo hasta que no sea aprobado por quien corresponda.
+Estuve realizando algunas mejoras al MH que creo yo estarían buenas para todos los users, esta version NO viene a mejorar al que le anda mal o lo lagea el MH (debido a un hardware antiguo), sino a implementar mejoras y ayudas al usuario principalmente a la hora de jugar torneos y PVP
 
-Ya no se usa mas el UI.Dll ahora todo va en Ombu_Settings.cfg para que nadie robe el mh :lol: (el ui.dll que cada uno tiene puede ser copiado dentro de éste nuevo archivo).
+Ya no se usa mas el UI.Dll ahora todo va en Ombu_Settings.cfg para edicón sencilla (el ui.dll que cada uno tiene puede ser copiado dentro de éste nuevo archivo).
 
 Detallo algunas de las mejoras:
-*"Spam" que indica la url para realizar las donaciones al servidor.
+*"Spam" que indica donde hacer click en el juego para realizar las donaciones al servidor.
 *Valor de cada item aproximado según la lista de precios actual realizada por los usuarios (no oficial). El MH al entrar a una partida te dice que los precios son a modo de REFERENCIA no para ser tomados tal cual (para evitar problemas)
 *Indica que items necesitas para craftear.
 *Indica que items necesitas para upgradear el item en cuestión.
-*Indica que RW's se pueden armar en la base
-*Indica que items necesitas para subir la runa
-*No se ven las orejas
+*Indica que RW's se pueden armar en la base.
+*Indica que items necesitas para subir la runa.
+*No se ven las orejas (item que indica que un jugador te mató).
 
 Y lo mas importante. Mejoras en PVP
-*Plantilla de tablas mejoradas con recomendaciones (útil para usuarios novatos), indica cuantas resis son "aceptables" y permitidas, los braks y mucho mas. También te lo calcula al momento si sumas resis te dice cuanta te falta para tener lo "ideal"
+*Plantilla de tablas mejoradas con recomendaciones (útil para usuarios novatos), indica cuantas resistencias son "aceptables" y permitidas según las reglas del server, los breaks y mucho mas. También te lo calcula al momento, si sumas resis te dice cuanta te falta para tener lo "ideal".
+
 *Modo Arbitro: Lo mejor de todo
+
 *Indica cuando un usuario utiliza pociones de Vida o Mana, usa Auras no permitidas o Usa Templos.
-Para que esto funcione no es necesario que todos tengan el MH actualizado un user con MH viejo puede ser detectado por un user con el MH nuevo.
+Para que esto funcione NO es necesario que todos tengan el MH actualizado un user con MH viejo puede ser detectado por un user con el MH nuevo, esto se debe a que se interceptan los packets envviados al server y se devuelve en formato texto (notificación).
 *La notificación le aparece a todo usuario que posea el MH nuevo
 *Los usuarios no necesitan estar "cerca" para que esta notificación aparezca, quiere decir que mientras ambos esten en el acto 1 va a figurar que potearon o hicieron algo no permitido.
 *Tiene un activador para evitar el flood a quien no le guste o sobre todo si se usa en bh no te aparezca una notificación molesta e inútil para ese ámbito
+
+Se pueden buscar los cambios realizados (CTRL+F) en la solución escribiendo mi nombre (guido) esta todo comentado.
+
+
+
+
+
