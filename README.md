@@ -43,13 +43,21 @@ TODO:
 Me gustaría implementar contador de tiempo restante en buffs
 
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/1.jpg)
+
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Notificaciones.jpg)
+
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Tablas.jpg)
+
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Atajos.jpg)
+
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Valor-Items.jpg)
+
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Craft.jpg)
+
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Upgrade-2.jpg)
+
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/RW.jpg)
+
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Runas.jpg)
 
 
