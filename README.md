@@ -42,7 +42,7 @@ Se pueden buscar los cambios realizados (CTRL+F) en la solución escribiendo mi 
 TODO:
 Me gustaría implementar contador de tiempo restante en buffs
 
-![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/1.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/1.jpg?raw=true)
 
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Notificaciones.jpg)
 
