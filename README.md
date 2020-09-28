@@ -6,12 +6,19 @@ Ya no se utiliza mas el UI.Dll ahora todo va en Ombu_Settings.cfg para edicón s
 
 Detallo algunas de las mejoras:
 *"Spam" que indica donde hacer click en el juego para realizar las donaciones al servidor.
-*Valor de cada item aproximado según la lista de precios actual realizada por los usuarios (no oficial). El MH al entrar a una partida te dice que los precios son a modo de REFERENCIA no para ser tomados tal cual (para evitar problemas)
+
+*Valor de cada item aproximado según la lista de precios actual realizada por los usuarios (no oficial). El MH al entrar a una partida te dice que los precios son a modo de REFERENCIA no para ser tomados tal cual (para evitar problemas).
+
 *Indica que items necesitas para craftear.
+
 *Indica que items necesitas para upgradear el item en cuestión.
+
 *Indica que RW's se pueden armar en la base.
+
 *Indica que items necesitas para subir la runa.
+
 *No se ven las orejas (item que indica que un jugador te mató).
+
 *Se incluye traduccion a español de varias opciones provistas por Slash.
 
 Mejoras y ayudas en PVP:
