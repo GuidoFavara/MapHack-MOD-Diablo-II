@@ -42,14 +42,14 @@ Se pueden buscar los cambios realizados (CTRL+F) en la solución escribiendo mi 
 TODO:
 Me gustaría implementar contador de tiempo restante en buffs
 
-![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/1.jpg)
-![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Notificaciones.jpg)
-![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Tablas.jpg)
-![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Atajos.jpg)
-![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Pictures/Valor-Items.jpg)
-![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Pictures/Craft.jpg)
-![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Pictures/Upgrade-2.jpg)
-![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Pictures/RW.jpg)
-![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Pictures/Runas.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/1.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Notificaciones.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Tablas.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Atajos.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Valor-Items.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Craft.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Upgrade-2.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/RW.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Runas.jpg)
 
 
