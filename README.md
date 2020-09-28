@@ -12,8 +12,9 @@ Detallo algunas de las mejoras:
 *Indica que RW's se pueden armar en la base.
 *Indica que items necesitas para subir la runa.
 *No se ven las orejas (item que indica que un jugador te mató).
+*Se incluye traduccion a español de varias opciones provistas por Slash.
 
-Y lo mas importante. Mejoras en PVP
+Mejoras y ayudas en PVP:
 *Plantilla de tablas mejoradas con recomendaciones (útil para usuarios novatos), indica cuantas resistencias son "aceptables" y permitidas según las reglas del server, los breaks y mucho mas. También te lo calcula al momento, si sumas resis te dice cuanta te falta para tener lo "ideal".
 
 *Modo Arbitro: Lo mejor de todo
