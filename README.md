@@ -2,7 +2,7 @@ Estuve realizando algunas mejoras al MapHack Open Source de Slash Diablo que cre
 
 Estas implementaciones fueron inicialmente pensadas para aplicar en el servidor OMBU Diablo II, sin embargo al poner el source podría aplicar a cualquiera, solamente habría que cambiar los nombres de archivos puntuales
 
-Ya no se usa mas el UI.Dll ahora todo va en Ombu_Settings.cfg para edicón sencilla (el ui.dll que cada uno tiene puede ser copiado dentro de éste nuevo archivo).
+Ya no se utiliza mas el UI.Dll ahora todo va en Ombu_Settings.cfg para edicón sencilla (el ui.dll que cada uno tiene puede ser copiado dentro de éste nuevo archivo).
 
 Detallo algunas de las mejoras:
 *"Spam" que indica donde hacer click en el juego para realizar las donaciones al servidor.
@@ -26,6 +26,8 @@ Para que esto funcione NO es necesario que todos tengan el MH actualizado un use
 
 Se pueden buscar los cambios realizados (CTRL+F) en la solución escribiendo mi nombre (guido) esta todo comentado.
 
+TODO:
+Me gustaría implementar contador de tiempo restante en buffs
 
 
 
