@@ -1,4 +1,6 @@
-Estuve realizando algunas mejoras al MH que creo yo estarían buenas para todos los users, esta version NO viene a mejorar al que le anda mal o lo lagea el MH (debido a un hardware antiguo), sino a implementar mejoras y ayudas al usuario principalmente a la hora de jugar torneos y PVP
+Estuve realizando algunas mejoras al MapHack Open Source de Slash Diablo que creo yo estarían buenas para todos los users, esta version NO viene a mejorar al que le anda mal o lo lagea el MH (debido a un hardware antiguo), sino a implementar mejoras y ayudas al usuario principalmente a la hora de jugar torneos y PVP
+
+Estas implementaciones fueron inicialmente pensadas para aplicar en el servidor OMBU Diablo II, sin embargo al poner el source podría aplicar a cualquiera, solamente habría que cambiar los nombres de archivos puntuales
 
 Ya no se usa mas el UI.Dll ahora todo va en Ombu_Settings.cfg para edicón sencilla (el ui.dll que cada uno tiene puede ser copiado dentro de éste nuevo archivo).
 
