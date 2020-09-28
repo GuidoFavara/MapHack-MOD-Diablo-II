@@ -7,7 +7,7 @@ Ya no se utiliza mas el UI.Dll ahora todo va en Ombu_Settings.cfg para edicón s
 Detallo algunas de las mejoras:
 *"Spam" que indica donde hacer click en el juego para realizar las donaciones al servidor.
 
-*Valor de cada item aproximado según la lista de precios actual realizada por los usuarios (no oficial). El MH al entrar a una partida te dice que los precios son a modo de REFERENCIA no para ser tomados tal cual (para evitar problemas).
+*Valor de cada item aproximado según la lista de precios actual realizada por los usuarios (no oficial). El MH al entrar a una partida notifica que los precios son a modo de REFERENCIA no para ser tomados tal cual (para evitar problemas).
 
 *Indica que items necesitas para craftear.
 
@@ -42,6 +42,14 @@ Se pueden buscar los cambios realizados (CTRL+F) en la solución escribiendo mi 
 TODO:
 Me gustaría implementar contador de tiempo restante en buffs
 
-
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/1.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Notificaciones.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Tablas.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Atajos.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Pictures/Valor-Items.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Pictures/Craft.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Pictures/Upgrade-2.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Pictures/RW.jpg)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/tree/master/Pictures/Runas.jpg)
 
 
