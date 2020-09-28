@@ -29,6 +29,8 @@ Mejoras y ayudas en PVP:
 *Indica cuando un usuario utiliza pociones de Vida o Mana, usa Auras no permitidas o Usa Templos.
 Para que esto funcione NO es necesario que todos tengan el MH actualizado un user con MH viejo puede ser detectado por un user con el MH nuevo, esto se debe a que se interceptan los packets envviados al server y se devuelve en formato texto (notificación).
 
+
+
 *La notificación le aparece a todo usuario que posea mi version del MH.
 
 *Los usuarios no necesitan estar "cerca" para que esta notificación aparezca, quiere decir que mientras ambos esten en el acto 1 va a figurar que potearon o hicieron algo no permitido.
