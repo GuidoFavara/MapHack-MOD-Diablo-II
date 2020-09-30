@@ -1,50 +1,48 @@
-If you want you can see this Readme in [Spanish] (https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/READMESPANISH.md)
+TODO: Mejorar la resolución de las imagenes, subir gifs en funcionamiento, guía de compilación.
 
-I have been making some improvements to the Open Source MapHack of [Slash Diablo] (https://github.com/planqi/slashdiablo-maphack) that I think would be good for all users, this version comes to implement improvements and helps the user mainly to time to play tournaments and PVP
+Estuve realizando algunas mejoras al MapHack Open Source de [Slash Diablo](https://github.com/planqi/slashdiablo-maphack) que creo yo estarían buenas para todos los users, esta version viene a implementar mejoras y ayudas al usuario principalmente a la hora de jugar torneos y PVP
 
-These implementations were initially intended to be applied to the [Ombu Diablo II Server](https://foros.ombuserver.com.ar/viewtopic.php?f=3&t=254), however by putting the source it could apply to anyone, it would only be necessary to change the names of specific files
+Estas implementaciones fueron inicialmente pensadas para aplicar en el servidor [Ombu Diablo II](https://foros.ombuserver.com.ar/viewtopic.php?f=3&t=254), sin embargo al poner el source podría aplicar a cualquiera, solamente habría que cambiar los nombres de archivos puntuales
 
-The UI.Dll is no longer used, now everything goes in Ombu_Settings.cfg for simple editing (the ui.dll that each one has can be copied into this new file).
+Ya no se utiliza mas el UI.Dll ahora todo va en Ombu_Settings.cfg para edicón sencilla (el ui.dll que cada uno tiene puede ser copiado dentro de éste nuevo archivo).
 
-I detail some of the improvements:
-* "Spam" that indicates where to click on the game to make donations to the server.
+Detallo algunas de las mejoras:
+*"Spam" que indica donde hacer click en el juego para realizar las donaciones al servidor.
 
-* Approximate value of each item according to the current price list made by users (not official). The MH when entering a game notifies that the prices are as a REFERENCE not to be taken as is (to avoid problems).
+*Valor de cada item aproximado según la lista de precios actual realizada por los usuarios (no oficial). El MH al entrar a una partida notifica que los precios son a modo de REFERENCIA no para ser tomados tal cual (para evitar problemas).
 
-* Indicate what items you need to craft.
+*Indica que items necesitas para craftear.
 
-* Indicate what items you need to upgrade the item in question.
+*Indica que items necesitas para upgradear el item en cuestión.
 
-* Indicates that RW's can be assembled on the base.
+*Indica que RW's se pueden armar en la base.
 
-* Indicate what items you need to upload the rune.
+*Indica que items necesitas para subir la runa.
 
-* The ears are not visible (item that indicates that a player killed you).
+*No se ven las orejas (item que indica que mataste a un jugador).
 
-* Includes Spanish translations of various options provided by Slash.
+*Se incluye traduccion a español de varias opciones provistas por Slash.
 
-Improvements and helps in PVP:
-* Improved table template with recommendations (useful for novice users), indicates how many resistances are "acceptable" and allowed according to server rules, breaks and much more. It also calculates it for you at the moment, if you add resistance it tells you how much you need to have the "ideal".
+Mejoras y ayudas en PVP:
+*Plantilla de tablas mejoradas con recomendaciones (útil para usuarios novatos), indica cuantas resistencias son "aceptables" y permitidas según las reglas del server, los breaks y mucho mas. También te lo calcula al momento, si sumas resis te dice cuanta te falta para tener lo "ideal".
 
-* Referee Mode: Best of all
+*Modo Arbitro: Lo mejor de todo
 
-* Indicates when a user uses Potions of Life or Mana, uses Auras not allowed or uses Temples.
-For this to work, it is NOT necessary for everyone to have the updated MH, a user with an old MH can be detected by a user with the new MH, this is because the packets sent to the server are intercepted and returned in text format (notification) .
+*Indica cuando un usuario utiliza pociones de Vida o Mana, usa Auras no permitidas o Usa Templos.
+Para que esto funcione NO es necesario que todos tengan el MH actualizado un user con MH viejo puede ser detectado por un user con el MH nuevo, esto se debe a que se interceptan los packets envviados al server y se devuelve en formato texto (notificación).
 
 
 
-* The notification appears to every user who owns my version of the MH.
+*La notificación le aparece a todo usuario que posea mi version del MH.
 
-* Users do not need to be "close" for this notification to appear, it means that as long as they are both in act 1, it will appear that they potted or did something not allowed.
+*Los usuarios no necesitan estar "cerca" para que esta notificación aparezca, quiere decir que mientras ambos esten en el acto 1 va a figurar que potearon o hicieron algo no permitido.
 
-* It has an activator to avoid the flood to those who do not like it or especially if it is used in bh, an annoying and useless notification for that area does not appear
+*Tiene un activador para evitar el flood a quien no le guste o sobre todo si se usa en bh no te aparezca una notificación molesta e inútil para ese ámbito
 
-You can search for the changes made (CTRL + F) in the solution by writing my name (guido) it is all commented.
+Se pueden buscar los cambios realizados (CTRL+F) en la solución escribiendo mi nombre (guido) esta todo comentado.
 
 TODO:
-I would like to implement remaining time counter in buffs
-
-Improve the resolution of the images, upload gifs in operation, compilation guide
+Me gustaría implementar contador de tiempo restante en buffs
 
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/1.jpg?raw=true)
 
