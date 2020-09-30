@@ -1,8 +1,8 @@
-*If you want you can see this Readme in [Spanish] (https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/READMESPANISH.md)*
+If you want you can see this Readme in [Spanish] (https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/READMESPANISH.md)
 
 I have been making some improvements to the Open Source MapHack of [Slash Diablo] (https://github.com/planqi/slashdiablo-maphack) that I think would be good for all users, this version comes to implement improvements and helps the user mainly to time to play tournaments and PVP
 
-These implementations were initially intended to be applied to the OMBU Diablo II server, however by putting the source it could apply to anyone, it would only be necessary to change the names of specific files
+These implementations were initially intended to be applied to the [Ombu Diablo II Server](https://foros.ombuserver.com.ar/viewtopic.php?f=3&t=254), however by putting the source it could apply to anyone, it would only be necessary to change the names of specific files
 
 The UI.Dll is no longer used, now everything goes in Ombu_Settings.cfg for simple editing (the ui.dll that each one has can be copied into this new file).
 
