@@ -19,7 +19,7 @@ I detail some of the improvements:
 
 * Indicate what items you need to upload the rune.
 
-* The ears are not visible (item that indicates that a player killed you).
+* The ears are not visible (item you get when kill an enemy player).
 
 * Includes Spanish translations of various options provided by Slash.
 
