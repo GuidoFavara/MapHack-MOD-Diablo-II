@@ -1,3 +1,5 @@
+TODO: Mejorar la resolución de las imagenes, subir gifs en funcionamiento, guía de compilación.
+
 Estuve realizando algunas mejoras al MapHack Open Source de [Slash Diablo](https://github.com/planqi/slashdiablo-maphack) que creo yo estarían buenas para todos los users, esta version viene a implementar mejoras y ayudas al usuario principalmente a la hora de jugar torneos y PVP
 
 Estas implementaciones fueron inicialmente pensadas para aplicar en el servidor OMBU Diablo II, sin embargo al poner el source podría aplicar a cualquiera, solamente habría que cambiar los nombres de archivos puntuales
