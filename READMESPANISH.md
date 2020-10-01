@@ -23,6 +23,8 @@ Detallo algunas de las mejoras:
 
 *Se incluye traduccion a español de varias opciones provistas por Slash.
 
+*Casi todo lo importante esta traducido al Español, sin embargo algunos conceptos claves ya reconocidos por la comunidad seguiran en Inglés
+
 Mejoras y ayudas en PVP:
 *Plantilla de tablas mejoradas con recomendaciones (útil para usuarios novatos), indica cuantas resistencias son "aceptables" y permitidas según las reglas del server, los breaks y mucho mas. También te lo calcula al momento, si sumas resis te dice cuanta te falta para tener lo "ideal".
 
@@ -46,9 +48,13 @@ Me gustaría implementar contador de tiempo restante en buffs
 
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/1.jpg?raw=true)
 
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Pricing.png)
+
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Notificaciones.jpg?raw=true)
 
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Tablas.jpg?raw=true)
+
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/UI.jpg?raw=true)
 
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Atajos.jpg?raw=true)
 
@@ -61,3 +67,5 @@ Me gustaría implementar contador de tiempo restante en buffs
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/RW.jpg)
 
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Runas.jpg)
+
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/UpgradeRunes.jpg)
