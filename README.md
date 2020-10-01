@@ -52,7 +52,7 @@ I would like to implement remaining time counter in buffs
 
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/1.jpg?raw=true)
 
-![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Pricing.jpg?raw=true)
+![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Pricing.jpg)
 
 ![atext](https://github.com/GuidoFavara/MapHack-MOD-Diablo-II/blob/master/Pictures/Notificaciones.jpg?raw=true)
 
