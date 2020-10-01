@@ -25,6 +25,8 @@ I detail some of the improvements:
 
 * Includes Spanish translations of various options provided by Slash.
 
+* Almost everything is translated to Spanish
+
 Improvements and helps in PVP:
 * Improved table template with recommendations (useful for novice users), indicates how many resistances are "acceptable" and allowed according to server rules, breaks and much more. It also calculates it for you at the moment, if you add resistance it tells you how much you need to have the "ideal".
 
